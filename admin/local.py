@@ -32,7 +32,7 @@ class EnvironmentSettings:
         self.use_line_mask = True 
         self.use_init_flow = False
         self.lr = 1e-4   
-        self.diffusion_steps = 3 
+        self.diffusion_steps = 20
         self.batch_size = 10 
         self.n_threads = 4
         ######################################

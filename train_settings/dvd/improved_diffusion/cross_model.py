@@ -614,6 +614,7 @@ class DiT(nn.Module):
         if iter is True or tv is True: # true
             for block in self.blocks:
                 x4, x3, x2, x1  = block(x, t, tv, cond, msk6, msk_line, r)  # 4*(N, T, D) -> [N, 1024, 384]
+                x = x1
             n, _, d = x3.size()
             if feat.shape[-1]==16:
                 x = torch.cat([x1, x2, x3, x4], dim=2).transpose(1, 2).contiguous().view(n, 4*d, 8, 8) # (N, T, 3D)->[N, 384*4, 32, 32] [1, 1536, 64, 64]
