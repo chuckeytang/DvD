@@ -1,0 +1,24 @@
+# Python 编译缓存
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 模型权重 (DvD 核心权重)
+checkpoints/*.pt
+checkpoints/*.pth
+
+# 推理输出与临时文件
+checkpoints/SAMPLING_*/
+output/
+vis_hp/
+
+# 虚拟环境与本地配置
+.venv/
+.env
+.idea/
+.vscode/
+
+# 数据集 (仅保留目录结构，不上传图片)
+datasets/my_test/*
+!datasets/my_test/.gitkeep
