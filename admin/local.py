@@ -5,17 +5,15 @@ class EnvironmentSettings:
         self.pretrained_networks = self.workspace_dir
         self.pre_trained_models_dir = self.workspace_dir+"/backup"
         ########################################################################################
-        self.eval_dataset_name = 'jcy'  
+        self.eval_dataset_name = 'anyphoto'  
         if self.eval_dataset_name ==  'dir300':
             self.eval_dataset = '/home/share/dir300'   
         elif self.eval_dataset_name == 'docunet':
             self.eval_dataset = '/home/share/docunet'   
         elif self.eval_dataset_name == 'anyphoto':
-            self.eval_dataset = '/home/share/init_all_final/init_8'
+            self.eval_dataset = '/app/datasets/my_test'
         elif self.eval_dataset_name == 'docreal':
             self.eval_dataset = '/home/share/docreal'
-        elif self.eval_dataset_name == 'jcy':
-            self.eval_dataset = '/app/datasets/my_test'
         ########################################################################################
         self.dataset_name = 'doc3d'  
         if self.dataset_name == 'doc_debug':
